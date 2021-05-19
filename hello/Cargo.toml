@@ -1,0 +1,35 @@
+[package]
+name = "hello"
+version = "0.1.0"
+authors = ["Julian Stecklina <julian.stecklina@cyberus-technology.de>"]
+edition = "2018"
+
+# This crate is meant to be built for UEFI without std. Check
+# .cargo/config.toml for low-level settings.
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+# We need to pull in all sources that are used by the standard
+# library. This feels like a hack and naersk should be able to figure
+# out that it needs to vendor these sources as well.
+[dev-dependencies]
+compiler_builtins = "0.1.43"
+cfg-if = "0.1.10"
+getopts = "0.2.21"
+libc = "=0.2.93"
+hashbrown = "=0.11.0"
+rustc-demangle = "=0.1.18"
+hermit-abi = "=0.1.17"
+dlmalloc = "0.2.1"
+wasi = "=0.9.0"
+fortanix-sgx-abi = "0.3.3"
+cc = "1.0.67"
+
+[dependencies]
+uefi = "0.10.0"
+uefi-services = "0.7.0"
+log = "0.4.14"

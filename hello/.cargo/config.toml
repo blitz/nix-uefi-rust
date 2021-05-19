@@ -1,0 +1,12 @@
+[build]
+target = "x86_64-unknown-uefi"
+
+# This project was built/tested with `rustc 1.54.0-nightly.
+# We use a yet unstable Cargo-feature here called "build-std".
+# This is required to cross-compile the core-library for the target
+# "x86_64-unknown-uefi".
+[unstable]
+build-std = ["core", "compiler_builtins", "alloc"]
+# https://github.com/rust-osdev/cargo-xbuild
+# has "memset" "memcpy" etc support (otherwise libc may be used, which is not available)
+build-std-features = ["compiler-builtins-mem"]

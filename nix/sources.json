@@ -1,0 +1,38 @@
+{
+    "naersk": {
+        "branch": "master",
+        "description": "Build rust crates in Nix. No configuration, no code generation, no IFD. Sandbox friendly.",
+        "homepage": "",
+        "owner": "nmattia",
+        "repo": "naersk",
+        "rev": "a3f40fe42cc6d267ff7518fa3199e99ff1444ac4",
+        "sha256": "1nf7fn8anghwf6p5p58ywbcwdkjxq112qv663rn52jq9k95iakdi",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/naersk/archive/a3f40fe42cc6d267ff7518fa3199e99ff1444ac4.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "nixpkgs-unstable",
+        "description": "Nix Packages collection",
+        "homepage": "",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "40f26dfd652647880a6ec5b7d2f61acf47ff534f",
+        "sha256": "0yq8qjd2da4x0f37f4gqg8lg86a1512jv80mc2bfads5a7wmi3kc",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/40f26dfd652647880a6ec5b7d2f61acf47ff534f.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "rust-overlay": {
+        "branch": "master",
+        "description": "Pure and reproducible nix overlay for binary distributed rust toolchains",
+        "homepage": "",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "76dcb13aa8b434307679779590970f5852b47ccd",
+        "sha256": "00lxq2br0kk0k3sasvl3638alwqxjysrqi9gmgrzg97bvnf4x2jn",
+        "type": "tarball",
+        "url": "https://github.com/oxalica/rust-overlay/archive/76dcb13aa8b434307679779590970f5852b47ccd.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
