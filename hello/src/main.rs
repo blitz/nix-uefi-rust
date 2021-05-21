@@ -2,7 +2,6 @@
 #![no_std]
 #![feature(abi_efiapi)]
 
-use core::panic::PanicInfo;
 use log::info;
 use uefi::prelude::*;
 
